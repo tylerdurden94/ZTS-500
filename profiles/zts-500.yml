@@ -1,0 +1,83 @@
+name: zts-500
+components:
+  - id: main
+    capabilities:
+      - id: temperatureMeasurement
+        version: 1
+      - id: thermostatHeatingSetpoint
+        version: 1
+      - id: thermostatCoolingSetpoint
+        version: 1
+      - id: thermostatMode
+        version: 1
+      - id: thermostatFanMode
+        version: 1
+      - id: thermostatOperatingState
+        version: 1
+      - id: battery
+        version: 1
+      - id: filterState
+        version: 1
+      - id: filterStatus
+        version: 1
+      - id: refresh
+        version: 1
+    categories:
+      - name: Thermostat
+preferences:
+  - title: Temperature swing
+    name: temperatureSwing
+    description: Degrees Fahrenheit between switching temperatures (parameter 2)
+    required: false
+    preferenceType: enumeration
+    definition:
+      options:
+        "1": 1 °F
+        "2": 2 °F
+        "3": 3 °F
+        "4": 4 °F
+      default: "2"
+  - title: Second-stage differential
+    name: secondStageDifferential
+    description: Only applies to a multistage HVAC system (parameter 3)
+    required: false
+    preferenceType: enumeration
+    definition:
+      options:
+        "1": 1 °F
+        "2": 2 °F
+        "3": 3 °F
+        "4": 4 °F
+      default: "2"
+  - title: Auto-mode dead band
+    name: autoDeadBand
+    description: Separation between heating and cooling in Auto mode (parameter 4)
+    required: false
+    preferenceType: enumeration
+    definition:
+      options:
+        "3": 3 °F
+        "4": 4 °F
+        "5": 5 °F
+        "6": 6 °F
+      default: "4"
+  - title: Filter replacement interval
+    name: filterIntervalHours
+    description: Hours of HVAC usage before filter replacement (parameter 8)
+    required: false
+    preferenceType: integer
+    definition:
+      minimum: 500
+      maximum: 4000
+      default: 500
+  - title: Display brightness
+    name: displayBrightness
+    description: Thermostat display brightness, 1 dark to 3 bright (parameter 11)
+    required: false
+    preferenceType: enumeration
+    definition:
+      options:
+        "1": Dark
+        "2": Medium
+        "3": Bright
+      default: "2"
