@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+*.zip
+.venv/
+.validation-deps/
+publication/
+# Owner-specific deployment history stays local.
+DEPLOYMENT.md
+publication-manifest.json

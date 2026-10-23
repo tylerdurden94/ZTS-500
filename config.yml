@@ -1,0 +1,7 @@
+name: Remotec ZTS-500 Thermostat
+packageKey: remotec-zts-500-thermostat
+description: ZTS-500 thermostat with swing and filter monitoring
+permissions:
+  zwave: {}
+defaultProfile: zts-500
+vendorSupportInformation: https://products.z-wavealliance.org/z-wave-product/z-wave-smart-thermostat/
